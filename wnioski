@@ -11,4 +11,11 @@ b) podczas korzystania z kodu natywnego danej platformy
 - Mogę robić rozróżnienia w kodzie, np.: 
  const alignTextTop = Platform.OS ==='android' ? {textAlignVertical: 'top'}: {};
  ale preferowany sposób dostosowywania widoków dla platformy to tworzenie osobnych plików .android.js i .ios.js
- 
+
+- żeby zainstalować linta musiałem to zrobić tak jak w prawidłowej odpowiedzi tutaj: https://stackoverflow.com/questions/37705440/eslint-is-not-recognized-as-an-internal-or-external-command
+a potem wywołać jeszcze eslint --init
+i jeszcze zainstalować:
+yarn add -D babel-eslint
+i dodać "parser": "babel-eslint" do .exlintrc.json (bo inaczej rzucał się błąd Unexpected token itp.)
+> npm run lint - pokazuje listę błędów do naprawienia 
+> npm run lint:fix -odpala linta i próbuje naprawić te błędy które mogą zostac naprawione automatycznie
