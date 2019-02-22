@@ -25,6 +25,9 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 [] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
 - fajne czy niefajne?
   } git push -u origin master --no-verify - może byc włączony ale można pushować z tą opcją
+[] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
+dev.env.js lub production.env.js - jakie zmienne tam są i jak to wygląda w praktyce? 
+[] Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
