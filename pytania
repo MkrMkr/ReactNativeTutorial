@@ -16,7 +16,7 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
     ? Which style guide do you want to follow? Google (https://github.com/google/eslint-config-google)
     ? What format do you want your config file to be in? JSON
     } npm run lint:fix - próbuje automatycznie naprawiać błędy linta - będziemy używać takich rzeczy?
-    } lint on save
+    } lint on save - w Android Studio takiego czegoś nie mieliśmy
     }lint a Prettier        
     } konfiguracja reguł linta (rules w .eslintrc.json)
 [] autoformatowanie - Prettier - czy jakaś specjalna konfiguracja?
@@ -27,4 +27,5 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 [] Co to jest tak w sumie yarn poza tym że uruchamia :d?
 [] Co to jest tak w sumie babel?
+[] Co to jest tak w sumie Jest
 [] Ogarnąć sample Daniela i porównać z tym co mam tutaj w projekcie
