@@ -7,7 +7,7 @@
     "test": "jest",
     "ios": "react-native run-ios",
     "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
-    "prepush": "npm run lint && npm run test",
+    "prepush": "",
     "postinstall": "rm -rf .git/hooks/pre-push && node node_modules/husky/bin/install.js && rm -rf .git/hooks/pre-commit",
     "lint": "eslint app/",
     "lint:fix": "eslint app/ --fix"
