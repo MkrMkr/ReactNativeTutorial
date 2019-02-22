@@ -1,3 +1,7 @@
 - Expo działa od Androida 4.4 w górę
 -"Create React Native App" (połączone teraz z Expo?) pozwala na budowanie aplikacji w React Native na Androida i iOS'a bez zainstalowanego
 Xcode'a i Android Studio, ale jeśli chcemy mieć natywny kod w aplikacji - nie będzie się dało go dołączyć
+- dla danej platformy mogę zrobić component dodająć w nazwie np. android. Przykład:
+TextArea.component.android.js. Taki plik przydaje się:
+a) do dostosowania widoku na danej platformie
+b) podczas korzystania z kodu natywnego danej platformy
