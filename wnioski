@@ -1,0 +1,3 @@
+- Expo działa od Androida 4.4 w górę
+-"Create React Native App" (połączone teraz z Expo?) pozwala na budowanie aplikacji w React Native na Androida i iOS'a bez zainstalowanego
+Xcode'a i Android Studio, ale jeśli chcemy mieć natywny kod w aplikacji - nie będzie się dało go dołączyć
