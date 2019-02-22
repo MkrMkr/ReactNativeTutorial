@@ -24,6 +24,7 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
   "android": "cd android && ./gradlew clean && cd .. && react-native run-android",  w package.json
 [] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
 - fajne czy niefajne?
+  } git push -u origin master --no-verify - może byc włączony ale można pushować z tą opcją
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
