@@ -6,14 +6,11 @@
 
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Home from "./components/Home/Home.component";
 
 class NoteTaker extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-      </View>
-    );
+    return <Home />;
   }
 }
 
