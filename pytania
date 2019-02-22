@@ -22,6 +22,8 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 [] autoformatowanie - Prettier - czy jakaś specjalna konfiguracja?
 [] odpalanie na androidzie - czy sugerowane odpalanie cleana przed kazdym buildem jest takie super?
   "android": "cd android && ./gradlew clean && cd .. && react-native run-android",  w package.json
+[] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
+- fajne czy niefajne?
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
