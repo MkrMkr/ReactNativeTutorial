@@ -28,6 +28,7 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 [] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
 dev.env.js lub production.env.js - jakie zmienne tam są i jak to wygląda w praktyce? 
 [] Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
+[] Testy - czy piszecie i jak bardzo poważnie ?
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

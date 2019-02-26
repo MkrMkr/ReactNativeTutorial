@@ -81,3 +81,4 @@ class SomeComponent extends Component {
     const {someProp={}} = this.props;
   }
 }
+
