@@ -82,3 +82,6 @@ class SomeComponent extends Component {
   }
 }
 
+
+//Jest i Snapshoty -> testowanie UI
+//Enzyme - testowanie componentów ze state'ami
