@@ -1,1 +1,1 @@
-const counter = a => a + 1;
+export const counter = a => a + 1;
