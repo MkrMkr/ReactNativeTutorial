@@ -29,6 +29,10 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 dev.env.js lub production.env.js - jakie zmienne tam są i jak to wygląda w praktyce? 
 [] Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
 [] Testy - czy piszecie i jak bardzo poważnie ?
+[] AUTOIMPORT -> przykład z counter.utils.js -> NARAWDĘ TAKIE SŁABE TO MUSI BYĆ? 
+jak zaimportować funkcję "z automatu"?
+[] jak skończyć test w counter.util.tests.js?
+[] Snaphosty - niby fajna rzeczy - czy będziemy używać?
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

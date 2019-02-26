@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Some component renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  multiline={true}
+  onChangeText={[Function]}
+  style={
+    Array [
+      Object {
+        "borderColor": "gray",
+        "borderWidth": 1,
+        "height": 100,
+        "width": 200,
+      },
+      Object {
+        "textAlignVertical": "top",
+      },
+      undefined,
+    ]
+  }
+  underlineColorAndroid="transparent"
+  value=""
+/>
+`;
