@@ -20,6 +20,7 @@ i dodać "parser": "babel-eslint" do .exlintrc.json (bo inaczej rzucał się bł
 > npm run lint - pokazuje listę błędów do naprawienia 
 > npm run lint:fix -odpala linta i próbuje naprawić te błędy które mogą zostac naprawione automatycznie
 
+/////////////////////////////////////////////////////////////
 before es7 and after:
 -------------------------
  Before:
@@ -83,5 +84,9 @@ class SomeComponent extends Component {
 }
 
 
-//Jest i Snapshoty -> testowanie UI
-//Enzyme - testowanie componentów ze state'ami
+///////////////////////////////////////////////////////////////
+- Jest i Snapshoty -> testowanie UI
+- Enzyme - testowanie componentów ze state'ami
+- StyleSheets can be thought of as a subset of CSS along with a few additional helpers for RN
+
+
