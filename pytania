@@ -28,6 +28,8 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 [] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
 dev.env.js lub production.env.js - jakie zmienne tam są i jak to wygląda w praktyce? 
 [] Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
+
+//TESTY-----------------------------------------------------------start
 [] Testy - czy piszecie i jak bardzo poważnie ?
 [] AUTOIMPORT -> przykład z counter.utils.js -> NARAWDĘ TAKIE SŁABE TO MUSI BYĆ? 
 jak zaimportować funkcję "z automatu"?
@@ -54,8 +56,9 @@ więc zmieniłem:
 i mam błąd  Cannot find module 'react-dom' from 'ReactSixteenAdapter.js'
 i muszę zainstalować react-dom - 
 niby zainstalowałem , ale coś nie chciało działać itd
-[]
-
+[] mockowanie modułów Node.js - można manualnie można automatycznie - 
+czy mockuje się je w prawidłowych testach?
+//TESTY-----------------------------------------------------------end
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
