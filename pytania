@@ -9,7 +9,7 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 BONUS: jak ma się do tego u góry opcja > advanced (experimental) "Build your appp with Javascript with Expo APIs and custom native modules",
 którą mam przy inicjalizowaniu projektu przez expo init?
 
-c) Konfiguracja linta
+b) Konfiguracja linta
 [] eslint - jak skonfigurować? (eslint --init i trudne pytania, które zadaje) :            
 
     PS C:\Users\PC_21\Desktop\rawProject\WonderfulProject> eslint --init
@@ -26,7 +26,7 @@ c) Konfiguracja linta
     } lint on save - w Android Studio takiego czegoś nie mieliśmy -  będziemy używać takich rzeczy?
     } konfiguracja reguł linta (rules w .eslintrc.json)
 
-d) Prettier a lint
+c) Prettier a lint
 [] autoformatowanie - Prettier/ lint  - jak ma się "zwyczajny" lint do Prettier'a i jak je pogodzić/ czego używać?
   } Prettier używa prettier-eslint
   "Formats your JavaScript using prettier followed by eslint --fix"
@@ -36,7 +36,7 @@ https://github.com/prettier/prettier-eslint
  prettier is a more powerful automatic formatter." 
   } jak to wszystko skonfigurować?
 
-e) Odpalanie na Androidzie i Githooki
+d) Odpalanie na Androidzie i Githooki
 [] odpalanie na androidzie - czy sugerowane odpalanie cleana przed kazdym buildem jest takie super?
   "android": "cd android && ./gradlew clean && cd .. && react-native run-android",  w package.json
 [] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
@@ -44,7 +44,7 @@ e) Odpalanie na Androidzie i Githooki
   } można zrobić np. tak: git push -u origin master --no-verify -
     prepush lint może byc włączony ale można pushować z tą opcją w razie potrzeby
 
-f) Zmienne środowiskowe/ konfiguracja dev i prod
+e) Zmienne środowiskowe/ konfiguracja dev i prod
 [] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
 dev.env.js lub production.env.js - co może być w env.config.js i dev i production w praktyce? 
   } Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
