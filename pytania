@@ -68,6 +68,10 @@ Later, another dev named John made some changes in the component.
 Now the test of the snap will fail since the snap still contains the code which you wrote.
 John will just need to update the snapshot to make the test pass. All that is needed to update the test case is one command: 
 jest --updateSnapshot and he is done."
+!}//TODO 
+  We recommend creating an npm script for updating snaps. 
+  As you can see in the package.json of our boilerplate, it contains a command called
+  "test:update". This command goes through all the test cases and will update the snap whenever it is required.
 
 [] Jak poprawnie zainstalowac enzyme? 
 } konfiguracja enzyme w package json
