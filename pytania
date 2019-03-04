@@ -60,6 +60,15 @@ dev.env.js lub production.env.js - co może być w env.config.js i dev i product
 jak zaimportować funkcję "z automatu"?
 [] jak skończyć test w counter.util.tests.js?
 [] Snaphosty - niby fajna rzeczy - czy będziemy używać?
+} używając razem z nimi husky można by zablokować możliwość pushowania componentów których świadomie nie chcieliśmy zmieniać -> ale 
+czy to jest ok?
+
+"Consider this scenario: you worked on a component, generated a snap and pushed it. 
+Later, another dev named John made some changes in the component. 
+Now the test of the snap will fail since the snap still contains the code which you wrote.
+John will just need to update the snapshot to make the test pass. All that is needed to update the test case is one command: 
+jest --updateSnapshot and he is done."
+
 [] Jak poprawnie zainstalowac enzyme? 
 } konfiguracja enzyme w package json
 
