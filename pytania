@@ -104,7 +104,14 @@ niby zainstalowałem , ale coś nie chciało działać itd
   2. globalny plik z ogólnymi stylami definiujący np. cechy nagłówków, tekstu na buttonach (largeButtonText,largeHeaderText,  mediumHeaderText) //(styles.js)
   3. każdy komponent ma swój własny plik ze stylem //(np. Home.component.style.js) 
   4. plik ze stylem danego komponentu używa sobie globalnych stałych z theme.style.js
-  5. common styles...//TODO
+  5. common styles - jeśli w danym stylu należącym do konkretnego komponentu widzę np. powtarzający się kod
+  - mogę wyodrębniać wspólny styl i potem robić w stylu tego componentu np.
+            textAreaTitle: {
+            ...headingText, //pochodzi z wspólnego stylu
+            fontWeight: theme.FONT_WEIGHT_LIGHT,
+            fontStyle: 'italic'
+          },
+  ...//TODO
 
 //Stylowanie ------------------- end
 
