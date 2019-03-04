@@ -1,41 +1,64 @@
+//WSTĘPNA KONFIGURACJA/ FORMATOWANIE/ URUCHAMIANIE ------------------- start
 
-//Do odpowiedzenia "grupowego"
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? (Po to żeby zobaczyć jak komponenty działają na iOS)
-[] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych, jak najlepiej postawić sobie wirtualkę z 
-Mac OS na WindocdSrrfsfwsie? (Virtual box?) Zadziała z nią? Dużo będzie roboty przy przerzucaniu projektu? Jest sens to robić?
+a) Odpalanie na iOSie
+[] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? (Po to żeby zobaczyć jak komponenty działają na symulatorze iOS'a)
+[] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych (czy napewno? patrz b) ) i wspiera tylko Androida 4.4 w górę (chociaż to pewnie przejdzie)
+ jak najlepiej postawić sobie wirtualkę z Mac OS na Windowsie? (Virtual box?) Zadziała z nią? Dużo będzie roboty przy przerzucaniu projektu? Jest sens to robić?
 Jak w ogóle będziemy później podchodzić do testowania na iOSie?
-[] eslint - jak skonfigurować? 
-    } eslint --init i trudne pytania, które zadaje :d            
+
+BONUS: jak ma się do tego u góry opcja > advanced (experimental) "Build your appp with Javascript with Expo APIs and custom native modules",
+którą mam przy inicjalizowaniu projektu przez expo init?
+
+c) Konfiguracja linta
+[] eslint - jak skonfigurować? (eslint --init i trudne pytania, które zadaje) :            
+
     PS C:\Users\PC_21\Desktop\rawProject\WonderfulProject> eslint --init
-    ? How would you like to use ESLint? To check syntax, find problems, and enforce code style
+    ? How would you like to use ESLint? To check syntax, find problems, and enforce code style   //} Czy tylko check syntax, 
+                                                                                                     czy check syntax and find problems 
+                                                                                                     czy check syntax find problems and enforce code style ?
     ? What type of modules does your project use? JavaScript modules (import/export)
     ? Which framework does your project use? React
     ? Where does your code run? (Press <space> to select, <a> to toggle all, <i> to invert selection)Browser
     ? How would you like to define a style for your project? Use a popular style guide
-    ? Which style guide do you want to follow? Google (https://github.com/google/eslint-config-google)
+    ? Which style guide do you want to follow? Google (https://github.com/google/eslint-config-google)     //} Jaki style Guide?
     ? What format do you want your config file to be in? JSON
     } npm run lint:fix - próbuje automatycznie naprawiać błędy linta - będziemy używać takich rzeczy?
-    } lint on save - w Android Studio takiego czegoś nie mieliśmy
-    }lint a Prettier        
+    } lint on save - w Android Studio takiego czegoś nie mieliśmy -  będziemy używać takich rzeczy?
     } konfiguracja reguł linta (rules w .eslintrc.json)
-[] autoformatowanie - Prettier - czy jakaś specjalna konfiguracja?
+
+d) Prettier a lint
+[] autoformatowanie - Prettier/ lint  - jak ma się "zwyczajny" lint do Prettier'a i jak je pogodzić/ czego używać?
+  } Prettier używa prettier-eslint
+  "Formats your JavaScript using prettier followed by eslint --fix"
+...
+https://github.com/prettier/prettier-eslint
+"The fix feature of eslint is pretty great and can auto-format/fix much of your code according to your ESLint config.
+ prettier is a more powerful automatic formatter." 
+  } jak to wszystko skonfigurować?
+
+e) Odpalanie na Androidzie i Githooki
 [] odpalanie na androidzie - czy sugerowane odpalanie cleana przed kazdym buildem jest takie super?
   "android": "cd android && ./gradlew clean && cd .. && react-native run-android",  w package.json
 [] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
 - fajne czy niefajne?
-  } git push -u origin master --no-verify - może byc włączony ale można pushować z tą opcją
-[] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
-dev.env.js lub production.env.js - jakie zmienne tam są i jak to wygląda w praktyce? 
-[] Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
+  } można zrobić np. tak: git push -u origin master --no-verify -
+    prepush lint może byc włączony ale można pushować z tą opcją w razie potrzeby
 
-//TESTY-----------------------------------------------------------start
-[] Testy - czy piszecie i jak bardzo poważnie ?
+f) Zmienne środowiskowe/ konfiguracja dev i prod
+[] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
+dev.env.js lub production.env.js - co może być w env.config.js i dev i production w praktyce? 
+  } Jak dev i production który jest tutaj ma się do późniejszych flavor'ów androidowych?
+
+//WSTĘPNA KONFIGURACJA/ FORMATOWANIE/ URUCHAMIANIE ------------------- end
+
+//TESTY ------------------- start
+[] Czy piszecie i jak bardzo poważnie ?
 [] AUTOIMPORT -> przykład z counter.utils.js -> NARAWDĘ TAKIE SŁABE TO MUSI BYĆ? 
 jak zaimportować funkcję "z automatu"?
 [] jak skończyć test w counter.util.tests.js?
 [] Snaphosty - niby fajna rzeczy - czy będziemy używać?
-[] konfiguracja enzyme w package json
+[] Jak poprawnie zainstalowac enzyme? 
+} konfiguracja enzyme w package json
 
 "jest": {
   ...,
@@ -56,15 +79,17 @@ więc zmieniłem:
 i mam błąd  Cannot find module 'react-dom' from 'ReactSixteenAdapter.js'
 i muszę zainstalować react-dom - 
 niby zainstalowałem , ale coś nie chciało działać itd
-[] mockowanie modułów Node.js - można manualnie można automatycznie - 
-czy mockuje się je w prawidłowych testach?
-//TESTY-----------------------------------------------------------end
+[] mockowanie modułów Node.js - można manualnie można automatycznie - czy mockuje się je w prawidłowych testach?
+//TESTY ------------------- end
 
-//Styling------------------------------------------------------------
+//Stylowanie ------------------- start
+//Stylowanie ------------------- end
+
+
 
 //Do odpowiedzenia sobie samemu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 [] Co to jest tak w sumie yarn poza tym że uruchamia :d?
 [] Co to jest tak w sumie babel?
-[] Co to jest tak w sumie Jest
+[] Co to jest tak w sumie Jest?
 [] Ogarnąć sample Daniela i porównać z tym co mam tutaj w projekcie
