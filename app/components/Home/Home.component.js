@@ -5,9 +5,19 @@ import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 
 class Home extends Component {
+  state = {
+    title: "" //adding the state here temporarily for illustration purposes
+  };
+  setTitle = title => this.setState({ title }); //TODO: Ogarnąc tę konstrukcję
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.titleHeading}> Note Title</Text>
+        <TextInput
+          style={styles.titleTextInput}
+          onChangeText={this.setTitle}
+          value={this.state.title}
+        />
         <Text style={styles.textAreaTitle}> Please enter your note here </Text>
         <TextArea style={styles.textArea} />
       </View>
