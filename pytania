@@ -99,6 +99,13 @@ niby zainstalowałem , ale coś nie chciało działać itd
 //TESTY ------------------- end
 
 //Stylowanie ------------------- start
+[] czy takie podejście do stylowania jest ok?:
+  1. plik z globalnymi stałymi definiującymi np. główne kolory czy dostępne rozmiary czcionek // (theme.style.js)
+  2. globalny plik z ogólnymi stylami definiujący np. cechy nagłówków, tekstu na buttonach (largeButtonText,largeHeaderText,  mediumHeaderText) //(styles.js)
+  3. każdy komponent ma swój własny plik ze stylem //(np. Home.component.style.js) 
+  4. plik ze stylem danego komponentu używa sobie globalnych stałych z theme.style.js
+  5. common styles...//TODO
+
 //Stylowanie ------------------- end
 
 
