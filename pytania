@@ -1,9 +1,12 @@
 //WSTĘPNA KONFIGURACJA/ FORMATOWANIE/ URUCHAMIANIE ------------------- start
 
 a) Odpalanie na iOSie
-[] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? (Po to żeby zobaczyć jak komponenty działają na symulatorze iOS'a)
-[] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych (czy napewno? patrz b) ) i wspiera tylko Androida 4.4 w górę (chociaż to pewnie przejdzie)
- jak najlepiej postawić sobie wirtualkę z Mac OS na Windowsie? (Virtual box?) Zadziała z nią? Dużo będzie roboty przy przerzucaniu projektu? Jest sens to robić?
+[] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? 
+(Po to żeby zobaczyć jak komponenty działają na symulatorze iOS'a)
+[] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych (czy napewno? patrz b) ) 
+i wspiera tylko Androida 4.4 w górę (chociaż to pewnie przejdzie)
+ jak najlepiej postawić sobie wirtualkę z Mac OS na Windowsie? (Virtual box?) 
+ Zadziała z nią? Dużo będzie roboty przy przerzucaniu projektu? Jest sens to robić?
 Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 
 BONUS: jak ma się do tego u góry opcja > advanced (experimental) "Build your appp with Javascript with Expo APIs and custom native modules",
