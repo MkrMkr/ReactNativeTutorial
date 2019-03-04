@@ -112,6 +112,8 @@ niby zainstalowałem , ale coś nie chciało działać itd
             fontStyle: 'italic'
           },
   ...//TODO
+  styl danego komponentu nadpisuje importowany common
+  ...//TODO
 
 //Stylowanie ------------------- end
 
