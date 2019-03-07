@@ -1,9 +1,9 @@
 //WSTĘPNA KONFIGURACJA/ FORMATOWANIE/ URUCHAMIANIE ------------------- start
 
 a) Odpalanie na iOSie
-[] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? 
+[V] Czy mogę uruchomić projekt utworzony przez react-native init przez expo? - NIE
 (Po to żeby zobaczyć jak komponenty działają na symulatorze iOS'a)
-[] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych (czy napewno? patrz b) ) 
+[V] Uruchamianie na iOS - Expo jest raczej słabe bo nie mozna zalaczac modulow natywnych (czy napewno? patrz b) ) 
 i wspiera tylko Androida 4.4 w górę (chociaż to pewnie przejdzie)
  jak najlepiej postawić sobie wirtualkę z Mac OS na Windowsie? (Virtual box?) 
  Zadziała z nią? Dużo będzie roboty przy przerzucaniu projektu? Jest sens to robić?
@@ -11,6 +11,7 @@ Jak w ogóle będziemy później podchodzić do testowania na iOSie?
 
 BONUS: jak ma się do tego u góry opcja > advanced (experimental) "Build your appp with Javascript with Expo APIs and custom native modules",
 którą mam przy inicjalizowaniu projektu przez expo init?
+-DOSTANIEMY MACA I BEDZIE 
 
 b) Konfiguracja linta
 [] eslint - jak skonfigurować? (eslint --init i trudne pytania, które zadaje) :            
@@ -59,7 +60,7 @@ dev.env.js lub production.env.js - co może być w env.config.js i dev i product
 [] AUTOIMPORT -> przykład z counter.utils.js -> NARAWDĘ TAKIE SŁABE TO MUSI BYĆ? 
 jak zaimportować funkcję "z automatu"?
 [] jak skończyć test w counter.util.tests.js?
-[] Snaphosty - niby fajna rzeczy - czy będziemy używać?
+[V] Snaphosty - niby fajna rzeczy - czy będziemy używać? // W react-starter było
 } używając razem z nimi husky można by zablokować możliwość pushowania componentów których świadomie nie chcieliśmy zmieniać -> ale 
 czy to jest ok?
 
@@ -107,7 +108,7 @@ niby zainstalowałem , ale coś nie chciało działać itd
   5. common styles - jeśli w danym stylu należącym do konkretnego komponentu widzę np. powtarzający się kod
   - mogę wyodrębniać wspólne style, importować je do mojego konkretnego stylu dla danego komponentu
   i lekko modyfikować/ napisywać ten importowany styl //(common.style.js i Home.component.style.js)
-//TODO: ...
+  6. Style dla komponentu możemy robić osobno na iOS'a i Androida
 
 //Stylowanie ------------------- end
 
