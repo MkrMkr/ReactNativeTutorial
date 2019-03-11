@@ -6,7 +6,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     padding: theme.CONTAINER_PADDING,
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
   titleHeading: {
     ...headingText
