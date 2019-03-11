@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { TextInput, View, Text } from "react-native";
+import { Button, Alert, TextInput, View, Text } from "react-native";
 import PropTypes from "prop-types"; // TODO: nieuzywany import?
 import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
-import Button from "../Button/Button.component";
+import CustomButton from "../Button/CustomButton.component";
 import Geolocation from "../GeolocationComponent/Geolocation.component";
 
 class Home extends Component {
@@ -23,7 +23,8 @@ class Home extends Component {
         <Text style={styles.textAreaTitle}> Please enter your note here </Text>
         <TextArea style={styles.textArea} />
         <Geolocation />
-        <Button />
+        <CustomButton/>
+        <Button title="System button" onPress = {()=> Alert.alert('System button tapped')}/>
       </View>
     );
   }
