@@ -82,7 +82,7 @@ export default class FusedGeolocation extends Component {
     console.log("render!!!");
     return (
       <View>
-        <Text>--------Android component---------</Text>
+        <Text>--------Fused geolocation component android---------</Text>
         <Text>Latitude fused: {this.state.latitude}</Text>
         <Text>Longitude fused: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>
