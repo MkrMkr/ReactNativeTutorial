@@ -5,7 +5,7 @@ import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 import CustomButton from "../Button/CustomButton.component";
 import Geolocation from "../GeolocationComponent/Geolocation.component";
-import FusedGeolocation from "../FusedGeolocationComponent/FusedGeolocation.component";
+import FusedGeolocation from "../FusedGeolocationComponent/FusedGeolocation.component.ios";
 
 class Home extends Component {
   state = {

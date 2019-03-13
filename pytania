@@ -129,10 +129,13 @@ Robi się tak?
 [] Ogarnąć sample Daniela i porównać z tym co mam tutaj w projekcie
 
 
-//////////////PART 2/////////////////////
+//////////////PART 2///////////////////////////
 [] Hot reloading, live reloading - poczytać wiecej jak to działa, ale fajna rzecz
 //Geolokalizacja 
-
+https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-sources-in-ios
+[ ] Fused location na iOS jest by default?
+On iOS you need not worry about location provider. Based on the accuracy you are setting,
+ iOS framework will itself take decision and will push the location. You can not specify location provider in iOS.
 //--------
 
 Custom views

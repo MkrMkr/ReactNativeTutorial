@@ -19,6 +19,7 @@ export default class Geolocation extends Component {
           longitute: position.coords.longitude,
           timestamp: position.timestamp
         });
+      
       },
       error => {
         console.log(error);
