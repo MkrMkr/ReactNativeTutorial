@@ -5,6 +5,7 @@ import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 import CustomButton from "../Button/CustomButton.component";
 import Geolocation from "../GeolocationComponent/Geolocation.component";
+import FusedGeolocation from "../FusedGeolocationComponent/FusedGeolocation.component";
 
 class Home extends Component {
   state = {
@@ -23,8 +24,12 @@ class Home extends Component {
         <Text style={styles.textAreaTitle}> Please enter your note here </Text>
         <TextArea style={styles.textArea} />
         <Geolocation />
-        <CustomButton/>
-        <Button title="System button" onPress = {()=> Alert.alert('System button tapped')}/>
+        <FusedGeolocation />
+        <CustomButton />
+        <Button
+          title="System button"
+          onPress={() => Alert.alert("System button tapped")}
+        />
       </View>
     );
   }
