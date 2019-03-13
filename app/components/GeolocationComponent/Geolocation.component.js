@@ -6,7 +6,7 @@ export default class Geolocation extends Component {
     super(props);
     this.state = {
       latitude: null,
-      longitute: null,
+      longitude: null,
       timestamp: null
     };
   }
@@ -14,12 +14,23 @@ export default class Geolocation extends Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
+        console.log(
+          "New position in Geolocation component: " +
+            position.coords.latitude +
+            "," +
+            position.coords.longitude
+        );
         this.setState({
           latitude: position.coords.latitude,
-          longitute: position.coords.longitude,
+          longitude: position.coords.longitude,
           timestamp: position.timestamp
         });
-      
+        console.log(
+          "geolocation comp latitude: " +
+            this.latitude +
+            " longitude: " +
+            this.longitude
+        );
       },
       error => {
         console.log(error);
@@ -31,6 +42,7 @@ export default class Geolocation extends Component {
   render() {
     return (
       <View>
+        <Text>---General geolocation component---</Text>
         <Text>Latitude: {this.state.latitude}</Text>
         <Text>Longitude: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>

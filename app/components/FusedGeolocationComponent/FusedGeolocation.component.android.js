@@ -13,8 +13,9 @@ export default class FusedGeolocation extends Component {
   }
 
   async componentDidMount() {
+    console.log("componentDidMount");
     console.log(
-      "TEEEEEEEEEEEEEEEEEEEEEEEEST<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+      "-------------------------------------------------------------------"
     );
     const granted = await PermissionsAndroid.request(
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -63,6 +64,11 @@ export default class FusedGeolocation extends Component {
         console.log(
           "latitude: " + location.latitude + "longitude: " + location.longitude
         );
+        this.setState({
+          latitude: location.latitude,
+          longitude: location.longitude,
+          timestamp: location.timestamp
+        });
       });
 
       // Optional
@@ -73,8 +79,10 @@ export default class FusedGeolocation extends Component {
   }
 
   render() {
+    console.log("render!!!");
     return (
       <View>
+        <Text>--------Android component---------</Text>
         <Text>Latitude fused: {this.state.latitude}</Text>
         <Text>Longitude fused: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>
