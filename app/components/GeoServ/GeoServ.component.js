@@ -14,7 +14,7 @@ export default class GeoServ extends Component {
 
   async componentDidMount() {
     // Instead of navigator.geolocation, just use Geolocation.
-    var hasLocationPermission = false;
+    var hasLocationPermission = true;
     if (Platform.OS === "android") {
       hasLocationPermission = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -25,8 +25,6 @@ export default class GeoServ extends Component {
             "so we can let our app be even more awesome."
         }
       );
-    } else {
-      hasLocationPermission = true;
     }
     if (hasLocationPermission) {
       Geolocation.getCurrentPosition(
