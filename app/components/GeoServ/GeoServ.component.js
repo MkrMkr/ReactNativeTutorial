@@ -15,7 +15,9 @@ export default class GeoServ extends Component {
   async componentDidMount() {
     // Instead of navigator.geolocation, just use Geolocation.
     var hasLocationPermission = true;
+    console.log("Platform.OS equals to:" + Platform.OS);
     if (Platform.OS === "android") {
+      console.log("Requesting app permission");
       hasLocationPermission = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         {
@@ -29,7 +31,8 @@ export default class GeoServ extends Component {
     if (hasLocationPermission) {
       Geolocation.getCurrentPosition(
         position => {
-          console.log(position);
+          console.log("GeoServ component position" + position);
+          alert(JSON.stringify(position));
           this.setState({
             latitude: position.latitude,
             longitude: position.longitude,
@@ -38,15 +41,24 @@ export default class GeoServ extends Component {
         },
         error => {
           // See error code charts below.
-          console.log(error.code, error.message);
+          console.log("GeoServ component error" + error);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
       );
+      Geolocation.watchPosition(latestloc => {
+        console.log("latestloc:" + latestloc);
+      });
     }
   }
 
   render() {
-    const { ...extraProps } = this.props; // TODO: co te 3 kropki tu znacza? to jest jakas tablica czy coś?
-    return <Text>Abcd</Text>;
+    return (
+      <View>
+        <Text>--------Fused geolocation component android---------</Text>
+        <Text>Latitude fused: {this.state.latitude}</Text>
+        <Text>Longitude fused: {this.state.longitude}</Text>
+        <Text>timestamp: {this.state.timestamp}</Text>
+      </View>
+    );
   }
 }
