@@ -5,6 +5,7 @@ import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 import CustomButton from "../Button/CustomButton.component";
 import FusedGeolocation from "../FusedGeolocationComponent/FusedGeolocation.component";
+import GeoServ from "../GeoServ/GeoServ.component";
 
 class Home extends Component {
   state = {
@@ -22,6 +23,7 @@ class Home extends Component {
         />
         <Text style={styles.textAreaTitle}> Please enter your note here </Text>
         <TextArea style={styles.textArea} />
+        <GeoServ />
         <FusedGeolocation />
         <CustomButton />
         <Button
