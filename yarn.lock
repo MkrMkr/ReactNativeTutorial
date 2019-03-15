@@ -5282,10 +5282,20 @@ react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
 
-react-native@0.58.4:
-  version "0.58.4"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.58.4.tgz#bb1392727712787ba84983104c4920c0f4082677"
-  integrity sha512-vJlku+vRgiip9i2/NvYHYvMnHPZftROOnHdbeFCkxNpb90oot+VrocbkXe7qhVKCBKZTQrRNb5P+m0Gtv59Zcg==
+react-native-fused-location@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-fused-location/-/react-native-fused-location-0.4.0.tgz#8f217de382e6e5c34db091cbcaca0c9d2f4c7dc4"
+  integrity sha512-GXFLobFPUszk52RuhazGXZ8cbVpXQMjlPPxTh09n4339rjU9I6Da4BR0NKe/2CBOgensi8uj9YEFvO4KKxlGKg==
+
+react-native-geolocation-service@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-geolocation-service/-/react-native-geolocation-service-2.0.0.tgz#9fbab4953726b3a3ca9a74388a92dc1e1997127a"
+  integrity sha512-X9WMTqWX6n0GH55/YVKwrdkSl64uTqfIt2ICKpwx6Qko62nqBHHS6AP6BODLQqsfGnZlpNcbDWRoj7JOuKxk+g==
+
+react-native@^0.58.6:
+  version "0.58.6"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.58.6.tgz#a6d273cd2f51b0e3b141dad5f19622e0000497b3"
+  integrity sha512-m/7L0gYXS4yHjs+PKmyurh1LLr7/tpobAX8Iv7Dwu4XT1ZcZFeCATn420E9U3nC2XsT54AmRR2Fv7VGgf+M2vQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     absolute-path "^0.0.0"
