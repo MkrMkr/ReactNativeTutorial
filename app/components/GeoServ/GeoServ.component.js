@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PermissionAndroid, View, Text } from "react-native";
+import { PermissionsAndroid, View, Text } from "react-native";
 import Geolocation from "react-native-geolocation-service";
 
 export default class GeoServ extends Component {
