@@ -9,7 +9,7 @@ a) do dostosowania widoku na danej platformie
 b) podczas korzystania z kodu natywnego danej platformy
 
 - Mogę robić rozróżnienia w kodzie, np.: 
- const alignTextTop = Platform.OS ==='android' ? {textAlignVertical: 'top'}: {};
+ const alignTextTop = Platform.OS ==='ancheck ? {textAlignVertical: 'top'}: {};
  ale preferowany sposób dostosowywania widoków dla platformy to tworzenie osobnych plików .android.js i .ios.js
 
 - żeby zainstalować linta musiałem to zrobić tak jak w prawidłowej odpowiedzi tutaj: https://stackoverflow.com/questions/37705440/eslint-is-not-recognized-as-an-internal-or-external-command

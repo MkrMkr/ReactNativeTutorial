@@ -1,23 +1,42 @@
 import React, { Component } from "react";
-import { PermissionsAndroid, View, Text } from "react-native";
+import { Platform, PermissionsAndroid, View, Text } from "react-native";
 import Geolocation from "react-native-geolocation-service";
 
 export default class GeoServ extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      latitude: null,
+      longitude: null,
+      timestamp: null
+    };
+  }
+
   async componentDidMount() {
     // Instead of navigator.geolocation, just use Geolocation.
-    const hasLocationPermission = await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-      {
-        title: "App needs to access your location",
-        message:
-          "App needs access to your location " +
-          "so we can let our app be even more awesome."
-      }
-    );
+    var hasLocationPermission = false;
+    if (Platform.OS === "android") {
+      hasLocationPermission = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "App needs to access your location",
+          message:
+            "App needs access to your location " +
+            "so we can let our app be even more awesome."
+        }
+      );
+    } else {
+      hasLocationPermission = true;
+    }
     if (hasLocationPermission) {
       Geolocation.getCurrentPosition(
         position => {
           console.log(position);
+          this.setState({
+            latitude: position.latitude,
+            longitude: position.longitude,
+            timestamp: position.timestamp
+          });
         },
         error => {
           // See error code charts below.
