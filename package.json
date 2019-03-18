@@ -19,7 +19,8 @@
     "react": "16.6.3",
     "react-native": "^0.58.6",
     "react-native-fused-location": "^0.4.0",
-    "react-native-geolocation-service": "^2.0.0"
+    "react-native-geolocation-service": "^2.0.0",
+    "react-navigation": "^3.4.1"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
