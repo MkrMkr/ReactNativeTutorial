@@ -1,0 +1,48 @@
+1.defaultowe api opisane w dokumentacji RN:
+----------------------------------------
++ flaga high accuracy
+
+-trzeba samemu decydować o tym kiedy requestować o pozycję z GPS a kiedy z wifi(?) (nie ma setLocationPriority)
+
+//TODO:
+[] ale czy działa tak samo jak flaga high accuracy w fused?
+[] czy zwraca last know location ?
+
+ 
+2. react-native-fused-location ( https://www.npmjs.com/package/react-native-fused-location )
+---------------------------------------------------------------------------------------------
++ flaga high accuracy
++ tryb automatycznego wyboru między dostarczaniem lokalizacji z wifi lub gps w zaleznosci od stanu baterii (setLocationPriority)
++ wyraźnie okreslona mozliwosc pobierania last known location
+
+- 439 weekly downloads
+- wersja 0.4.0
+- nie działa z iOSem - (trzeba robić dla niego osobny widok uzywajacy defaultowe API)
+               
+* od RN > 0.40
+* od Android SDK >=16
+
+3. react-native-geolocation-service ( https://www.npmjs.com/package/react-native-geolocation-service ) 
+-----------------------------------------------------------------------------------------------------
++ flaga high accuracy
++ wspólne api dla Androida i iOS'a
++ 6 561 weekly downloads
+
+* wersja 2.0.0 od RN> 0.57, poniej wersja 1.1.0
+         
+
+Opcje uzycia:
+-------------
+a) react-native-fused-location (Android) + defaultowe api (iOS)
+
++ Api podobne do orginalengo androidowego
++ setLocationPriority i lastKnownLocation 
+
+- Trzeba robić dwa osobne komponenty dla Androida i iOS'a
+
+b) użyć tylko react-native-geolocation-service
+
++ wspólny kod geolokalizacji dla Androida i iOS'a 
++ pod spodem iOS uzywa defaultowego api RN a Android FusedLocationProviderClient
+
+ 
