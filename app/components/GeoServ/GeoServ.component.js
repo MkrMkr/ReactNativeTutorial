@@ -31,11 +31,14 @@ export default class GeoServ extends Component {
     if (hasLocationPermission) {
       Geolocation.getCurrentPosition(
         position => {
-          console.log("GeoServ component position" + position);
-          alert(JSON.stringify(position));
+          console.log("GeoServ component position" + JSON.stringify(position));
+          var wholeJsonString = JSON.stringify(position);
+          var wholeModel = JSON.parse(wholeJsonString);
+          var coordsResulString = JSON.stringify(wholeModel.coords);
+          var coordsResultModel = JSON.parse(coordsResulString);
           this.setState({
-            latitude: position.latitude,
-            longitude: position.longitude,
+            latitude: coordsResultModel.latitude,
+            longitude: coordsResultModel.longitude,
             timestamp: position.timestamp
           });
         },
@@ -46,7 +49,7 @@ export default class GeoServ extends Component {
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
       );
       Geolocation.watchPosition(latestloc => {
-        console.log("latestloc:" + latestloc);
+        console.log("latestloc:" + JSON.stringify(latestloc));
       });
     }
   }
@@ -54,9 +57,9 @@ export default class GeoServ extends Component {
   render() {
     return (
       <View>
-        <Text>--------Fused geolocation component android---------</Text>
-        <Text>Latitude fused: {this.state.latitude}</Text>
-        <Text>Longitude fused: {this.state.longitude}</Text>
+        <Text>--------GeoServ component android---------</Text>
+        <Text>Latitude: {this.state.latitude}</Text>
+        <Text>Longitude: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>
       </View>
     );
