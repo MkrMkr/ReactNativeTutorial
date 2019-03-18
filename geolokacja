@@ -27,6 +27,7 @@
 + flaga high accuracy
 + wspólne api dla Androida i iOS'a
 + 6 561 weekly downloads
+[] czy zwraca last known location ?
 
 * wersja 2.0.0 od RN> 0.57, poniej wersja 1.1.0
          
@@ -45,4 +46,6 @@ b) użyć tylko react-native-geolocation-service
 + wspólny kod geolokalizacji dla Androida i iOS'a 
 + pod spodem iOS uzywa defaultowego api RN a Android FusedLocationProviderClient
 
- 
+ //TODO:
+ [] Przenieść requestowanie o gps do osobnych ekranów
+ [] Sprawdzić requestowanie o permissiony
