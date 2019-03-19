@@ -28,7 +28,7 @@ class Home extends Component {
         <CustomButton />
         <Button
           title="System button"
-          onPress={() => Alert.alert("System button tapped")}
+          onPress={() => this.props.navigation.navigate("GeoSample")}
         />
       </View>
     );
