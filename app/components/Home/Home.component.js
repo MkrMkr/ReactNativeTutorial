@@ -25,11 +25,13 @@ class Home extends Component {
         <TextArea style={styles.textArea} />
         <GeoServ />
         <FusedGeolocation />
-        <CustomButton />
-        <Button
-          title="System button"
-          onPress={() => this.props.navigation.navigate("GeoSample")}
-        />
+        <View style={{ flexDirection: "row" }}>
+          <CustomButton />
+          <Button
+            title="Go to geo sample"
+            onPress={() => this.props.navigation.navigate("GeoSample")}
+          />
+        </View>
       </View>
     );
   }
