@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Button, Alert, TextInput, View, Text } from "react-native";
-import PropTypes from "prop-types"; // TODO: nieuzywany import?
+import { Button, TextInput, View, Text } from "react-native";
 import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 import CustomButton from "../Button/CustomButton.component";
@@ -11,6 +10,16 @@ class Home extends Component {
   state = {
     title: "" //adding the state here temporarily for illustration purposes
   };
+
+  constructor(props) {
+    super(props);
+    this.goToGeoServAction = this.goToGeoServAction.bind(this);
+  }
+
+  goToGeoServAction() {
+    alert("works!");
+  }
+
   setTitle = title => this.setState({ title }); //TODO: Ogarnąc tę konstrukcję
   render() {
     return (
@@ -26,10 +35,10 @@ class Home extends Component {
         <GeoServ />
         <FusedGeolocation />
         <View style={{ flexDirection: "row" }}>
-          <CustomButton />
+          <CustomButton onPress={() => this.goToGeoServAction()} />
           <Button
-            title="Go to geo sample"
-            onPress={() => this.props.navigation.navigate("GeoSample")}
+            title="Go to FusedGeolocation sample"
+            onPress={() => this.props.navigation.navigate("FusedGeolocation")}
           />
         </View>
       </View>
