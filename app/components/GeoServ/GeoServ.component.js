@@ -13,22 +13,7 @@ export default class GeoServ extends Component {
   }
 
   async componentDidMount() {
-    // Instead of navigator.geolocation, just use Geolocation.
-    var hasLocationPermission = true;
-    console.log("Platform.OS equals to:" + Platform.OS);
-    if (Platform.OS === "android") {
-      console.log("Requesting app permission");
-      hasLocationPermission = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        {
-          title: "App needs to access your location",
-          message:
-            "App needs access to your location " +
-            "so we can let our app be even more awesome."
-        }
-      );
-    }
-    if (hasLocationPermission) {
+    if (await this.requestPermissionsIfNeeded()) {
       Geolocation.getCurrentPosition(
         position => {
           console.log("GeoServ component position" + JSON.stringify(position));
@@ -52,6 +37,22 @@ export default class GeoServ extends Component {
         console.log("latestloc:" + JSON.stringify(latestloc));
       });
     }
+  }
+
+  async requestPermissionsIfNeeded() {
+    var hasLocationPermission = true;
+    if (Platform.OS === "android") {
+      hasLocationPermission = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "App needs to access your location",
+          message:
+            "App needs access to your location " +
+            "so we can let our app be even more awesome."
+        }
+      );
+    }
+    return hasLocationPermission;
   }
 
   render() {
