@@ -138,7 +138,7 @@ On iOS you need not worry about location provider. Based on the accuracy you are
  iOS framework will itself take decision and will push the location. You can not specify location provider in iOS.
  [] Androidowe permissiony i requestowanie o nie, dialogi itp -jak się do tego wszystkiego mają?
  [] przejście na typescript
- [] debugowanie chrome i breakpointy - 
+ [+-] debugowanie chrome i breakpointy - 
  [] restowe api
  [] notyfikacje
  [] jak wyśrodkować tekst w buttonie?
@@ -146,6 +146,6 @@ On iOS you need not worry about location provider. Based on the accuracy you are
 
 Custom views
 ------------
-[] //todo more
+[V] Przekazywanie klikniecia do komponentu wyzej
 ------------
 

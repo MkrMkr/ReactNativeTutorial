@@ -17,15 +17,7 @@ export default class FusedGeolocation extends Component {
     console.log(
       "-------------------------------------------------------------------"
     );
-    const granted = await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-      {
-        title: "App needs to access your location",
-        message:
-          "App needs access to your location " +
-          "so we can let our app be even more awesome."
-      }
-    );
+    const granted = await this.requestPermissions();
     if (granted) {
       FusedLocation.setLocationPriority(FusedLocation.Constants.HIGH_ACCURACY);
 
@@ -76,6 +68,18 @@ export default class FusedGeolocation extends Component {
         console.warn(error);
       });
     }
+  }
+
+  async requestPermissions() {
+    return await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      {
+        title: "App needs to access your location",
+        message:
+          "App needs access to your location " +
+          "so we can let our app be even more awesome."
+      }
+    );
   }
 
   render() {
