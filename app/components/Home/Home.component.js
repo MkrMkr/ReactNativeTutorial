@@ -17,7 +17,7 @@ class Home extends Component {
   }
 
   goToGeoServAction() {
-    alert("works!");
+    this.props.navigation.navigate("GeoServ");
   }
 
   setTitle = title => this.setState({ title }); //TODO: Ogarnąc tę konstrukcję
@@ -32,8 +32,6 @@ class Home extends Component {
         />
         <Text style={styles.textAreaTitle}> Please enter your note here </Text>
         <TextArea style={styles.textArea} />
-        <GeoServ />
-        <FusedGeolocation />
         <View style={{ flexDirection: "row" }}>
           <CustomButton onPress={() => this.goToGeoServAction()} />
           <Button
