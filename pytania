@@ -143,6 +143,8 @@ On iOS you need not worry about location provider. Based on the accuracy you are
  [] notyfikacje
  [] jak wyśrodkować tekst w buttonie?
  [] przywracanie apy - co zrobić zeby pozostawala mi w nawigacji na wczesniejszym ekranie
+ [] aktualizacja gps na biezaco
+ [] wydzielić wspólny kod utilsów request permissions
 //--------
 
 Custom views

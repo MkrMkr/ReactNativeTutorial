@@ -16,27 +16,46 @@ export default class GeoServ extends Component {
     if (await this.requestPermissionsIfNeeded()) {
       Geolocation.getCurrentPosition(
         position => {
-          console.log("GeoServ component position" + JSON.stringify(position));
-          var wholeJsonString = JSON.stringify(position);
-          var wholeModel = JSON.parse(wholeJsonString);
-          var coordsResulString = JSON.stringify(wholeModel.coords);
-          var coordsResultModel = JSON.parse(coordsResulString);
-          this.setState({
-            latitude: coordsResultModel.latitude,
-            longitude: coordsResultModel.longitude,
-            timestamp: position.timestamp
-          });
+          alert("getCurrentPosition (success) invoked");
+          this.updateStateWithNewPosition(position);
         },
         error => {
-          // See error code charts below.
+          //Wywoła się np. gdy weszliśmy na ekran z pobieraniem lokalizacji
+          //z wyłączonym gpsem (watchPosition nie wywołuje się wtedy)
+          alert("getCurrentPosition (error) invoked");
           console.log("GeoServ component error" + error);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
       );
+      //Wywoływana przy kazdej zmianie pozycji gps w tym np. wtedy
+      //gdy gps był wyłączony, weszliśmy w miejsce aplikacji z pobieraniem lokalizacji,
+      // pojawil się systemowy dialog pytania o pozycję a następnie kliknelismy ok.
       Geolocation.watchPosition(latestloc => {
-        console.log("latestloc:" + JSON.stringify(latestloc));
+        alert("watchPosition invoked");
+        this.updateStateWithNewPosition(latestloc);
       });
     }
+  }
+
+  updateStateWithNewPosition(position) {
+    var coordsResultModel = this.parseCoords(position);
+    this.updateState(coordsResultModel, position);
+  }
+
+  parseCoords(position) {
+    var wholeJsonString = JSON.stringify(position);
+    var wholeModel = JSON.parse(wholeJsonString);
+    var coordsResulString = JSON.stringify(wholeModel.coords);
+    var coordsResultModel = JSON.parse(coordsResulString);
+    return coordsResultModel;
+  }
+
+  updateState(coordsResultModel, position) {
+    this.setState({
+      latitude: coordsResultModel.latitude,
+      longitude: coordsResultModel.longitude,
+      timestamp: position.timestamp
+    });
   }
 
   async requestPermissionsIfNeeded() {
