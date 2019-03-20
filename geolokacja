@@ -89,6 +89,12 @@ b) użyć tylko react-native-geolocation-service
 + wspólny kod geolokalizacji dla Androida i iOS'a 
 + pod spodem iOS uzywa defaultowego api RN a Android FusedLocationProviderClient
 
- //TODO:
- [V] Przenieść requestowanie o gps do osobnych ekranów
+//Permissiony
+/////////////
+
  [V] Sprawdzić requestowanie o permissiony
+
+
+ Inne
+ /////
+ Pamiętać o czyszczeniu watch w componentWillUnmount bo bez tego będę odbierał pozycję na wszystkich ekranach jednocześnie

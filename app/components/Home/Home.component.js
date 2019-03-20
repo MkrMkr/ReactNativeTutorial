@@ -3,8 +3,6 @@ import { SafeAreaView, Button, TextInput, View, Text } from "react-native";
 import styles from "./Home.component.style";
 import TextArea from "../TextArea/TextArea.component";
 import CustomButton from "../Button/CustomButton.component";
-import FusedGeolocation from "../FusedGeolocationComponent/FusedGeolocation.component";
-import GeoServ from "../GeoServ/GeoServ.component";
 
 class Home extends Component {
   state = {
