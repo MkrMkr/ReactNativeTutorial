@@ -50,14 +50,16 @@ Największy minus:
 2. react-native-fused-location ( https://www.npmjs.com/package/react-native-fused-location )
 ---------------------------------------------------------------------------------------------
 + api bardzo zblizone do orginalnego androidowego 
-+ setLocationPriority() - mozliwosc uzaleznienia dokladnosci lokalizacji od wykorzystania baterii
+
+Plus znaleziony tylko w tej bibliotece:
++ setLocationPriority() - mozliwosc uzaleznienia dokladnosci lokalizacji od wykorzystania baterii - w innej bibliotece 
+
 + rozwiązany problem timeout'ów [nie potwierdzone, ale skoro uzywa androidowego fused location...]
 
 - podejrzenie ze uzywa pod spodem przestarzałego api androidowego (po kliknieciu "Fused" w link https://www.npmjs.com/package/react-native-fused-location )
 - 439 weekly downloads
 - wersja 0.4.0
-- nie udało mi się uruchomic tego na iOS (co nie przeszkadza o ile zgadzamy się na zrobienie dla iOS'a osobnego widoku uzywajacego defaultowe API)
-               
+- nie udało mi się uruchomic tego na iOS (co nie przeszkadza o ile zgadzamy się na zrobienie dla iOS'a osobnego widoku uzywajacego defaultowe API)               
 * od RN > 0.40
 * od Android SDK >=16
 
