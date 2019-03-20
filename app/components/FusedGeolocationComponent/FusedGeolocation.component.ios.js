@@ -42,7 +42,7 @@ export default class FusedGeolocation extends Component {
   render() {
     return (
       <View>
-        <Text>---Fused geolocation component general---</Text>
+        <Text>---RN default geolocation---</Text>
         <Text>Latitude: {this.state.latitude}</Text>
         <Text>Longitude: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>

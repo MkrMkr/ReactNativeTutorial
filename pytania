@@ -140,6 +140,7 @@ iOS framework will itself take decision and will push the location. You can not 
 https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-sources-in-ios
 [+-] Androidowe permissiony i requestowanie o nie, dialogi itp -jak się do tego wszystkiego mają?
 [V] aktualizacja gps na biezaco - watchPosition robi to dobrze
+[V] fake gps ios - najlepiej odpalać z xcodea i wtedy Debug->Location i działa
 //Geolokalizacja -------------------------------- end
 
 
@@ -148,9 +149,7 @@ https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-
 [] restowe api
 [] notyfikacje
 [] przywracanie apy - co zrobić zeby pozostawala mi w nawigacji na wczesniejszym ekranie
-
 [] wydzielić wspólny kod utilsów request permissions
-[] sprawdzić działa
 //--------
 
 Custom views
