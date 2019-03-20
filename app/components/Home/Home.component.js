@@ -9,14 +9,9 @@ class Home extends Component {
     title: "" //adding the state here temporarily for illustration purposes
   };
 
-  constructor(props) {
-    super(props);
-    this.goToGeoServAction = this.goToGeoServAction.bind(this);
-  }
-
-  goToGeoServAction() {
+  goToGeoServAction = () => {
     this.props.navigation.navigate("GeoServ");
-  }
+  };
 
   setTitle = title => this.setState({ title }); //TODO: Ogarnąc tę konstrukcję
   render() {
