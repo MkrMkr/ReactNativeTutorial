@@ -141,7 +141,7 @@ https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-
 [+-] Androidowe permissiony i requestowanie o nie, dialogi itp -jak się do tego wszystkiego mają?
 [V] aktualizacja gps na biezaco - watchPosition robi to dobrze
 [V] fake gps ios - najlepiej odpalać z xcodea i wtedy Debug->Location i działa
-[V] co zrobić zeby na iOSie nie wychodzilo na zaokrągleniea - SafeAreaView
+[] Jak odpiąć lokalizacje
 //Geolokalizacja -------------------------------- end
 
 
@@ -151,6 +151,8 @@ https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-
 [] notyfikacje
 [] przywracanie apy - co zrobić zeby pozostawala mi w nawigacji na wczesniejszym ekranie
 [] wydzielić wspólny kod utilsów request permissions
+[V] co zrobić zeby na iOSie nie wychodzilo na zaokrągleniea - SafeAreaView
+
 //--------
 
 Custom views

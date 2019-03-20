@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text } from "react-native";
 
 export default class FusedGeolocation extends Component {
+  watchId = null;
   constructor(props) {
     super(props);
     this.state = {
@@ -37,6 +38,13 @@ export default class FusedGeolocation extends Component {
       },
       { enableHighAccuracy: true, timeout: 30000 }
     );
+    this.watchId = navigator.geolocation.watchPosition(newPosition => {
+      alert("newPosition:" + newPosition);
+    });
+  }
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.watchId);
   }
 
   render() {
