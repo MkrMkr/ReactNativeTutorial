@@ -46,7 +46,7 @@ d) Odpalanie na Androidzie i Githooki
 [] Husky i prepush lint https://www.reactnative.guide/6-conventions-and-code-style/6.2-git-pre-hooks.html
 - fajne czy niefajne?
   } można zrobić np. tak: git push -u origin master --no-verify -
-    prepush lint może byc włączony ale można pushować z tą opcją w razie potrzeby
+    prepush lint może byc włączony ale można pushować z tą opcją w razie potrzeby 
 
 e) Zmienne środowiskowe/ konfiguracja dev i prod
 [] environment variables - zawartość env.config.js jest podmieniana na to co znajduje się w 
@@ -130,25 +130,32 @@ Robi się tak?
 
 
 //////////////PART 2///////////////////////////
-[] Hot reloading, live reloading - poczytać wiecej jak to działa, ale fajna rzecz
-//Geolokalizacja 
-https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-sources-in-ios
+
+[] Hot reloading, live reloading - poczytać wiecej jak to działa pod spodem
+
+//Geolokalizacja -------------------------------- start
 [ ] Fused location na iOS jest by default?
 On iOS you need not worry about location provider. Based on the accuracy you are setting,
- iOS framework will itself take decision and will push the location. You can not specify location provider in iOS.
- [+-] Androidowe permissiony i requestowanie o nie, dialogi itp -jak się do tego wszystkiego mają?
- [] przejście na typescript
- [+-] debugowanie chrome i breakpointy - 
- [] restowe api
- [] notyfikacje
- [] jak wyśrodkować tekst w buttonie?
- [] przywracanie apy - co zrobić zeby pozostawala mi w nawigacji na wczesniejszym ekranie
- [] aktualizacja gps na biezaco
- [] wydzielić wspólny kod utilsów request permissions
+iOS framework will itself take decision and will push the location. You can not specify location provider in iOS.
+https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-sources-in-ios
+[+-] Androidowe permissiony i requestowanie o nie, dialogi itp -jak się do tego wszystkiego mają?
+[V] aktualizacja gps na biezaco - watchPosition robi to dobrze
+//Geolokalizacja -------------------------------- end
+
+
+[] przejście na typescript
+[+-] debugowanie chrome i breakpointy - 
+[] restowe api
+[] notyfikacje
+[] przywracanie apy - co zrobić zeby pozostawala mi w nawigacji na wczesniejszym ekranie
+
+[] wydzielić wspólny kod utilsów request permissions
+[] sprawdzić działa
 //--------
 
 Custom views
 ------------
 [V] Przekazywanie klikniecia do komponentu wyzej
+[] jak wyśrodkować tekst w buttonie?
 ------------
 
