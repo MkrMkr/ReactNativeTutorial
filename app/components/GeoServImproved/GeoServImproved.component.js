@@ -24,7 +24,13 @@ export default class GeoServImproved extends Component {
       android: {
         //coarse - to mniej dokładna lokalizacja
         //fine - dokładniejsza lokalizacja
-        detail: "coarse"
+        detail: "coarse",
+        rationale: {
+          title: "Location permission",
+          message: "We have to use location for this app",
+          buttonPositive: "OK",
+          buttonNegative: "Cancel"
+        }
       }
     }).then(granted => {
       if (granted) {
