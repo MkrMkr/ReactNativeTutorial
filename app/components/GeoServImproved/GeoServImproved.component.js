@@ -18,42 +18,52 @@ export default class GeoServImproved extends Component {
       distanceFilter: 5.0
     });
     RNLocation.requestPermission({
-      ios: "whenInUse",
+      //whenInUse - czy pozwalac na dostep do lokalizacji gdy uzywam aplikacji ?
+      //always - czy pozwalac na dostep do lokalizacji tylko gdy jestem w aplikacji czy nawet wtedy gdy nie uzywam aplikacji?
+      ios: "always",
       android: {
         detail: "coarse"
       }
     }).then(granted => {
       if (granted) {
-        this.locationSubscription = RNLocation.subscribeToLocationUpdates(
-          locations => {
-            var locationsString = JSON.stringify(locations);
-            alert(locationsString);
-            var myArray = JSON.parse(locationsString);
-            var location = myArray[0];
-
-            this.setState({
-              latitude: location.latitude,
-              longitude: location.longitude,
-              timestamp: location.timestamp
-            });
-
-            /* Example location returned
-            {
-              speed: -1,
-              longitude: -0.1337,
-              latitude: 51.50998,
-              accuracy: 5,
-              heading: -1,
-              altitude: 0,
-              altitudeAccuracy: -1
-              floor: 0
-              timestamp: 1446007304457.029
-            }
-            */
-          }
-        );
+        this._startUpdatingLocation();
       }
     });
+  }
+
+  _startUpdatingLocation = () => {
+    this.locationSubscription = RNLocation.subscribeToLocationUpdates(
+      locations => {
+        var location = this.parseLocation(locations);
+        alert(
+          "latitude: " + location.latitude + " , longitude" + location.longitude
+        );
+        this.updateState(location);
+      }
+    );
+  };
+
+  _stopUpdatingLocation = () => {
+    this.locationSubscription && this.locationSubscription(); //??
+    this.setState({
+      latitude: "",
+      longitude: ""
+    });
+  };
+
+  updateState(location) {
+    this.setState({
+      latitude: location.latitude,
+      longitude: location.longitude,
+      timestamp: location.timestamp
+    });
+  }
+
+  parseLocation(locations) {
+    var locationsString = JSON.stringify(locations);
+    var myArray = JSON.parse(locationsString);
+    var location = myArray[0];
+    return location;
   }
 
   updateStateWithNewPosition(position) {
@@ -61,29 +71,14 @@ export default class GeoServImproved extends Component {
     this.updateState(coordsResultModel, position);
   }
 
-  parseCoords(position) {
-    var wholeJsonString = JSON.stringify(position);
-    var wholeModel = JSON.parse(wholeJsonString);
-    var coordsResulString = JSON.stringify(wholeModel.coords);
-    var coordsResultModel = JSON.parse(coordsResulString);
-    return coordsResultModel;
-  }
-
-  updateState(coordsResultModel, position) {
-    this.setState({
-      latitude: coordsResultModel.latitude,
-      longitude: coordsResultModel.longitude,
-      timestamp: position.timestamp
-    });
+  componentWillUnmount() {
+    this._stopUpdatingLocation();
   }
 
   render() {
     return (
       <View>
-        <Text>
-          --------react-native-geolocation-service +
-          react-native-location--------
-        </Text>
+        <Text>--------react-native-location--------</Text>
         <Text>Latitude: {this.state.latitude}</Text>
         <Text>Longitude: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>
