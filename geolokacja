@@ -74,11 +74,12 @@ Plus znaleziony tylko w tej bibliotece:
 - prosta flaga enableHighAccuracy taka jak w defaultowym API RN
 i brak setLocationPriority 
 
-4. react-native-location
+4. react-native-location (https://www.npmjs.com/package/react-native-location)
 -------------------------
-+Allows you choose what type of permission to ask for ("when in use" or "always"). The built-in geolocation library will look at your plist file and choose "always" if you have the NSLocationAlwaysUsageDescription property, however, you might have a usecase where you want to start by asking the user for "while in use" permission and later upgrade the permission to "always" when they turn on a feature which requires background location.
-+Ability to check the current permission status (RNLocation.getCurrentPermission).
-+Allows you to monitor the device heading.
++ wykorzystuje api natywne iOS i rozwiazuje ? problem z dokł na nim, ma flagę do uzycia GoogleFusedLocation 
++ umozliwia pytanie o permissiony z opcjami "when in use" lub "always" na iOS i coarse lub fine na androidzie
++ ma dodatkowe metody odpytywania o pozycje na iOS
+[] Background mode setup - pominalem
 
 4. [płatne] react-native-background-geolocation https://www.npmjs.com/package/react-native-background-geolocation
 ------------------------------------------------------------------------------------------------------------------
@@ -109,8 +110,8 @@ d) [wydaje się najlepsze, jeśli b) nie jest wystarczające] react-native-geolo
 (react_native_location prawdopodobnie naprawia problemy z dokładnością na iOS [przeczytane, niesprawdzone] + daje większe mozliwosci z iOSowymi permissionami )
 
 e) react-native-fused-location (Android) + react_native_location (iOS)
-
-f)[płatne]react-native-background-geolocation
+f) [nie sprawdzone] react-native-location z właczeniem opcji GoogleFusedLocation
+g)[płatne]react-native-background-geolocation
 //Permissiony
 /////////////
 * Android - RN ma specjalne api do requestowania o permissiony
