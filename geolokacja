@@ -106,7 +106,7 @@ c)[zaimpl] react-native-fused-location (Android) + defaultowe api (iOS)
 - co z dokładnością geolokalizacji na iOS? ( https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default )
 
 d) [wydaje się najlepsze, jeśli b) nie jest wystarczające] react-native-geolocation-service + react_native_location 
-(react_native_location prawdopodobnie naprawia problemy z dokładnością na iOS + daje większe mozliwosci z iOSowymi permissionami )
+(react_native_location prawdopodobnie naprawia problemy z dokładnością na iOS [przeczytane, niesprawdzone] + daje większe mozliwosci z iOSowymi permissionami )
 
 e) react-native-fused-location (Android) + react_native_location (iOS)
 

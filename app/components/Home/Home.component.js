@@ -29,6 +29,10 @@ class Home extends Component {
             Please enter your note here{" "}
           </Text>
           <TextArea style={styles.textArea} />
+          <Button
+            title="Go to connected libs sample"
+            onPress={() => this.props.navigation.navigate("GeoServImproved")}
+          />
           <View style={{ flexDirection: "row" }}>
             <CustomButton onPress={() => this.goToGeoServAction()} />
             <Button
