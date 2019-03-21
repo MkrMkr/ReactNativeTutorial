@@ -105,18 +105,19 @@ c)[zaimpl] react-native-fused-location (Android) + defaultowe api (iOS)
 - Trzeba robić dwa osobne komponenty dla Androida i iOS'a
 - co z dokładnością geolokalizacji na iOS? ( https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default )
 
-+rozwiązany problem tiemoutów na Androidzie (ale do sprawdzenia czy nie uzywa przestarzalego api pod spodem)
-+setLocationPriority
-
 d) [wydaje się najlepsze, jeśli b) nie jest wystarczające] react-native-geolocation-service + react_native_location 
+(react_native_location prawdopodobnie naprawia problemy z dokładnością na iOS + daje większe mozliwosci z iOSowymi permissionami )
 
 e) react-native-fused-location (Android) + react_native_location (iOS)
 
 //Permissiony
 /////////////
-* Android - to co jest defaultowo
-[] iOS - https://github.com/timfpark/react-native-location
+* Android - RN ma specjalne api do requestowania o permissiony
+* iOS  - jeśli defaultowe api nie wystarcza jest biblioteka, uzywająca :
+ https://github.com/timfpark/react-native-location
 https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default 
+(sprawdzanie biez. permissionow, monitor the device heading, 
+"you might have a usecase where you want to start by asking the user for "while in use" permission and later upgrade the permission to "always" when they turn on a feature which requires background location.")
 
  Inne
  /////
