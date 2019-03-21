@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Platform, PermissionsAndroid, View, Text } from "react-native";
-import Geolocation from "react-native-geolocation-service";
+import { View, Text } from "react-native";
+import RNLocation from "react-native-location";
 
 export default class GeoServImproved extends Component {
   watchId = null;
@@ -13,29 +13,47 @@ export default class GeoServImproved extends Component {
     };
   }
 
-  async componentDidMount() {
-    if (await this.requestPermissionsIfNeeded()) {
-      Geolocation.getCurrentPosition(
-        position => {
-          alert("getCurrentPosition (success) " + JSON.stringify(position));
-          this.updateStateWithNewPosition(position);
-        },
-        error => {
-          //Wywoła się np. gdy weszliśmy na ekran z pobieraniem lokalizacji
-          //z wyłączonym gpsem (watchPosition nie wywołuje się wtedy)
-          alert("getCurrentPosition (error) " + JSON.stringify(error));
-          console.log("GeoServ component error" + error);
-        },
-        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-      );
-      //Wywoływana przy kazdej zmianie pozycji gps w tym np. wtedy
-      //gdy gps był wyłączony, weszliśmy w miejsce aplikacji z pobieraniem lokalizacji,
-      // pojawil się systemowy dialog pytania o pozycję a następnie kliknelismy ok.
-      this.watchId = Geolocation.watchPosition(latestloc => {
-        alert("watchPosition " + JSON.stringify(latestloc));
-        this.updateStateWithNewPosition(latestloc);
-      });
-    }
+  componentDidMount() {
+    RNLocation.configure({
+      distanceFilter: 5.0
+    });
+    RNLocation.requestPermission({
+      ios: "whenInUse",
+      android: {
+        detail: "coarse"
+      }
+    }).then(granted => {
+      if (granted) {
+        this.locationSubscription = RNLocation.subscribeToLocationUpdates(
+          locations => {
+            var locationsString = JSON.stringify(locations);
+            alert(locationsString);
+            var myArray = JSON.parse(locationsString);
+            var location = myArray[0];
+
+            this.setState({
+              latitude: location.latitude,
+              longitude: location.longitude,
+              timestamp: location.timestamp
+            });
+
+            /* Example location returned
+            {
+              speed: -1,
+              longitude: -0.1337,
+              latitude: 51.50998,
+              accuracy: 5,
+              heading: -1,
+              altitude: 0,
+              altitudeAccuracy: -1
+              floor: 0
+              timestamp: 1446007304457.029
+            }
+            */
+          }
+        );
+      }
+    });
   }
 
   updateStateWithNewPosition(position) {
@@ -57,26 +75,6 @@ export default class GeoServImproved extends Component {
       longitude: coordsResultModel.longitude,
       timestamp: position.timestamp
     });
-  }
-
-  async requestPermissionsIfNeeded() {
-    var hasLocationPermission = true;
-    if (Platform.OS === "android") {
-      hasLocationPermission = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        {
-          title: "App needs to access your location",
-          message:
-            "App needs access to your location " +
-            "so we can let our app be even more awesome."
-        }
-      );
-    }
-    return hasLocationPermission;
-  }
-
-  componentWillUnmount() {
-    Geolocation.clearWatch(this.watchId);
   }
 
   render() {

@@ -21,6 +21,7 @@
     "react-native-fused-location": "^0.4.0",
     "react-native-geolocation-service": "^2.0.0",
     "react-native-gesture-handler": "~1.0.14",
+    "react-native-location": "^2.2.0",
     "react-navigation": "^3.4.1"
   },
   "devDependencies": {
