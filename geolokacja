@@ -49,7 +49,7 @@ Największy minus:
  
 2. react-native-fused-location ( https://www.npmjs.com/package/react-native-fused-location )
 ---------------------------------------------------------------------------------------------
-+ api bardzo zblizone do orginalnego androidowego 
++(-?) api bardzo zblizone do oryginalnego androidowego 
 
 Plus znaleziony tylko w tej bibliotece:
 + setLocationPriority() - mozliwosc uzaleznienia dokladnosci lokalizacji od wykorzystania baterii - w innej bibliotece 
@@ -65,29 +65,32 @@ Plus znaleziony tylko w tej bibliotece:
 
 3. react-native-geolocation-service ( https://www.npmjs.com/package/react-native-geolocation-service ) 
 -----------------------------------------------------------------------------------------------------
-+ flaga high accuracy
++ 2 proste metody jak wszędzie: watchPosition wywołuje się na kazdą zmianę lokalizacji, getCurrentPosition słuzy do zwracania ostatniej znanej lokalizacji
 + wspólne api dla Androida i iOS'a
-+ 6 561 weekly downloads
++ 6 561 weekly downloads (ostatnio nawet: 8,392)
++ próbuje rozwiazać problem timeoutów na Androidzie
++ na iOSie nie trzeba robić prawie nic po dolaczeniu bibilioteki - tylko dodać wpis do Info.pslist tak jak przy dodawaniu defaultowej geolokalizacji RN
 
-* getCurrentPosition słuzy do zwracania ostatniej znanej lokalizacji
-* watchPosition wywołuje się na kazdą zmianę lokalizacji
+- prosta flaga enableHighAccuracy taka jak w defaultowym API RN
+i brak setLocationPriority 
+
 * wersja 2.0.0 od RN> 0.57, poniej wersja 1.1.0
-
 //////////////////////////////////////////////////////////////////////////////////////////////         
 
 Opcje uzycia:
 -------------
-a) react-native-fused-location (Android) + defaultowe api (iOS)
+a) react-native-fused-location (Android) + defaultowe api (iOS) 
 
-+ Api podobne do orginalengo androidowego
-+ setLocationPriority i lastKnownLocation 
++ Rozwiązany problem timeoutów na Androidzie
++ setLocationPriority(czyli mozliwosc okreslania dokladnosci GPS/poziomu zuzywania baterii [na Androidzie, na iOS trzeba by poszukać biblioteki...])
 
 - Trzeba robić dwa osobne komponenty dla Androida i iOS'a
 
-b) użyć tylko react-native-geolocation-service
+b) react-native-geolocation-service
 
 + wspólny kod geolokalizacji dla Androida i iOS'a 
 + pod spodem iOS uzywa defaultowego api RN a Android FusedLocationProviderClient
+- brak mozliwosci okreslania dokladosci GPS
 
 //Permissiony
 /////////////

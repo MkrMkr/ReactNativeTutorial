@@ -134,7 +134,7 @@ Robi się tak?
 [] Hot reloading, live reloading - poczytać wiecej jak to działa pod spodem
 
 //Geolokalizacja -------------------------------- start
-[ ] Fused location na iOS jest by default?
+[V] Fused location na iOS jest by default?
 On iOS you need not worry about location provider. Based on the accuracy you are setting,
 iOS framework will itself take decision and will push the location. You can not specify location provider in iOS.
 https://stackoverflow.com/questions/24038315/how-to-get-location-from-different-sources-in-ios
