@@ -117,9 +117,7 @@ f)[płatne]react-native-background-geolocation
 * iOS  - jeśli defaultowe api nie wystarcza jest biblioteka, uzywająca :
  https://github.com/timfpark/react-native-location
 https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default 
-(sprawdzanie biez. permissionow, monitor the device heading, 
-"you might have a usecase where you want to start by asking the user for "while in use" permission and later upgrade the permission to "always" when they turn on a feature which requires background location.")
-
+Allows you choose what type of permission to ask for ("when in use" or "always"). The built-in geolocation library will look at your plist file and choose "always"
  Inne
  /////
  * Pamiętać o czyszczeniu watch w componentWillUnmount bo bez tego będę odbierał pozycję na wszystkich ekranach jednocześnie
