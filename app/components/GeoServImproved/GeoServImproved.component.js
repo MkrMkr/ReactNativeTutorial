@@ -22,6 +22,8 @@ export default class GeoServImproved extends Component {
       //always - czy pozwalac na dostep do lokalizacji tylko gdy jestem w aplikacji czy nawet wtedy gdy nie uzywam aplikacji?
       ios: "always",
       android: {
+        //coarse - to mniej dokładna lokalizacja
+        //fine - dokładniejsza lokalizacja
         detail: "coarse"
       }
     }).then(granted => {
