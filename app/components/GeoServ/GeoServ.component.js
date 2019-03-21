@@ -3,6 +3,7 @@ import { Platform, PermissionsAndroid, View, Text } from "react-native";
 import Geolocation from "react-native-geolocation-service";
 
 export default class GeoServ extends Component {
+  watchId = null;
   constructor(props) {
     super(props);
     this.state = {
@@ -16,13 +17,13 @@ export default class GeoServ extends Component {
     if (await this.requestPermissionsIfNeeded()) {
       Geolocation.getCurrentPosition(
         position => {
-          alert("getCurrentPosition (success) " + position);
+          alert("getCurrentPosition (success) " + JSON.stringify(position));
           this.updateStateWithNewPosition(position);
         },
         error => {
           //Wywoła się np. gdy weszliśmy na ekran z pobieraniem lokalizacji
           //z wyłączonym gpsem (watchPosition nie wywołuje się wtedy)
-          alert("getCurrentPosition (error) " + error);
+          alert("getCurrentPosition (error) " + JSON.stringify(error));
           console.log("GeoServ component error" + error);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
@@ -30,8 +31,8 @@ export default class GeoServ extends Component {
       //Wywoływana przy kazdej zmianie pozycji gps w tym np. wtedy
       //gdy gps był wyłączony, weszliśmy w miejsce aplikacji z pobieraniem lokalizacji,
       // pojawil się systemowy dialog pytania o pozycję a następnie kliknelismy ok.
-      Geolocation.watchPosition(latestloc => {
-        alert("watchPosition " + latestloc);
+      this.watchId = Geolocation.watchPosition(latestloc => {
+        alert("watchPosition " + JSON.stringify(latestloc));
         this.updateStateWithNewPosition(latestloc);
       });
     }
@@ -74,10 +75,14 @@ export default class GeoServ extends Component {
     return hasLocationPermission;
   }
 
+  componentWillUnmount() {
+    Geolocation.clearWatch(this.watchId);
+  }
+
   render() {
     return (
       <View>
-        <Text>--------GeoServ component android---------</Text>
+        <Text>--------react-native-geolocation-service--------</Text>
         <Text>Latitude: {this.state.latitude}</Text>
         <Text>Longitude: {this.state.longitude}</Text>
         <Text>timestamp: {this.state.timestamp}</Text>

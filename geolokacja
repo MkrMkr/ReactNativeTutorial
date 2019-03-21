@@ -86,7 +86,7 @@ i brak setLocationPriority
 * wersja 2.0.0 od RN> 0.57, poniej wersja 1.1.0
 //////////////////////////////////////////////////////////////////////////////////////////////         
 
-Opcje uzycia:
+Opcje
 -------------
 a) Defaultowe API RN 
 
@@ -110,6 +110,7 @@ d) [wydaje się najlepsze, jeśli b) nie jest wystarczające] react-native-geolo
 
 e) react-native-fused-location (Android) + react_native_location (iOS)
 
+f)[płatne]react-native-background-geolocation
 //Permissiony
 /////////////
 * Android - RN ma specjalne api do requestowania o permissiony
