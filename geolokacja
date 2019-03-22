@@ -41,10 +41,13 @@ and will push the location. You can not specify location provider in iOS.
     i moze wymagać dłuzszego czasu pobierania lokalizacji
     ("....trying to get a more accurate fix may require more time. [z opisu Core location]")
 
-Największy minus:
-!!! - Na Androidzie występują timeout'y przy pobieraniu lokazliacji [nie sprawdzałem doświadczalnie, ale pisze tak w opisie biblioteki] , 
+- W3C Geolocation API
+
+- Na Androidzie występują timeout'y przy pobieraniu lokazliacji [nie sprawdzałem doświadczalnie, ale pisze tak w opisie biblioteki
++ potwierdzają to komentarze na stackoverflow] , 
    których nie ma gdy uzywa się natywnego FusedLocationProviderClient API.  Na iOS ich nie ma
     (przynajmniej wg https://www.npmjs.com/package/react-native-geolocation-service) 
+
 
  
 2. react-native-fused-location ( https://www.npmjs.com/package/react-native-fused-location )
@@ -76,10 +79,35 @@ i brak setLocationPriority
 
 4. react-native-location (https://www.npmjs.com/package/react-native-location)
 -------------------------
-+ wykorzystuje api natywne iOS i rozwiazuje ? problem z dokł na nim, ma flagę do uzycia GoogleFusedLocation 
++ wykorzystuje natywne API obydwu platform, podobno pozwala na załączenie providera GoogleFusedLocation [ale nie wiem jak to zrobić]
++ skoro wykorzystuje natywne API - rozwiązuje ewentualne problemy dokładności/timeoutów
++ pozwala na ustawianie flag dokładnosci GPS charakterystycznych dla obydwu platform
 + umozliwia pytanie o permissiony z opcjami "when in use" lub "always" na iOS i coarse lub fine na androidzie
-+ ma dodatkowe metody odpytywania o pozycje na iOS
-[] Background mode setup - pominalem
++ ma dodatkowe metody odpytywania o pozycje charakterystyczne dla iOS'a np. subscribeToSignificantLocationUpdates
+
+- wymaga dołączania bibliotek natywnych obydwu platform
+- problemy w konfiguracji/ odpaliłem tylko najprostszy przykład pobrania lokalizacji
+
+
+* RNLocation.configure({
+    distanceFilter: 100, // Meters
+    desiredAccuracy: {
+      ios: "best",
+      android: "balancedPowerAccuracy"
+    },
+    // Android only
+    androidProvider: "auto",
+    interval: 5000, // Milliseconds
+    fastestInterval: 10000, // Milliseconds
+    maxWaitTime: 5000, // Milliseconds
+    // iOS Only
+    activityType: "other",
+    allowsBackgroundLocationUpdates: false,
+    headingFilter: 1, // Degrees
+    headingOrientation: "portrait",
+    pausesLocationUpdatesAutomatically: false,
+    showsBackgroundLocationIndicator: false,
+})
 
 4. [płatne] react-native-background-geolocation https://www.npmjs.com/package/react-native-background-geolocation
 ------------------------------------------------------------------------------------------------------------------
