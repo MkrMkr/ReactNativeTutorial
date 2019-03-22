@@ -87,7 +87,8 @@ i brak setLocationPriority
 - wymaga dołączania bibliotek natywnych obydwu platform
 - problemy w konfiguracji/ odpaliłem tylko najprostszy przykład pobrania lokalizacji
 - problem z pobieraniem lokalizacji na biezaco
-
+- wygląda na to ze na Androdzie wymaga dodatkowego natywnego kodu (nie związanego z biblioteką)
+pozwalającego na dostarczenie FusedLocation providera
 
 * RNLocation.configure({
     distanceFilter: 100, // Meters
