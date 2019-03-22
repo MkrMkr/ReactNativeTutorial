@@ -44,10 +44,9 @@ and will push the location. You can not specify location provider in iOS.
 - W3C Geolocation API
 
 - Na Androidzie występują timeout'y przy pobieraniu lokazliacji [nie sprawdzałem doświadczalnie, ale pisze tak w opisie biblioteki
-+ potwierdzają to komentarze na stackoverflow] , 
++ potwierdzają to komentarze na stackoverflow , 
    których nie ma gdy uzywa się natywnego FusedLocationProviderClient API.  Na iOS ich nie ma
     (przynajmniej wg https://www.npmjs.com/package/react-native-geolocation-service) 
-
 
  
 2. react-native-fused-location ( https://www.npmjs.com/package/react-native-fused-location )
@@ -87,6 +86,7 @@ i brak setLocationPriority
 
 - wymaga dołączania bibliotek natywnych obydwu platform
 - problemy w konfiguracji/ odpaliłem tylko najprostszy przykład pobrania lokalizacji
+- problem z pobieraniem lokalizacji na biezaco
 
 
 * RNLocation.configure({
