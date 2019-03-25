@@ -138,13 +138,14 @@ c)[zaimpl] react-native-fused-location (Android) + defaultowe api (iOS)
 e) react-native-fused-location (Android) + react_native_location (iOS)
 f) [nie sprawdzone] react-native-location z właczeniem opcji GoogleFusedLocation
 g)[płatne]react-native-background-geolocation
+
 //Permissiony
 /////////////
+* https://facebook.github.io/react-native/docs/geolocation
 * Android - RN ma specjalne api do requestowania o permissiony
-* iOS  - jeśli defaultowe api nie wystarcza jest biblioteka, uzywająca :
- https://github.com/timfpark/react-native-location
-https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default 
+* iOS  - jeśli defaultowe api nie wystarcza, mozna uzyc react-native-location
 Allows you choose what type of permission to ask for ("when in use" or "always"). The built-in geolocation library will look at your plist file and choose "always"
+
  Inne
  /////
  * Pamiętać o czyszczeniu watch w componentWillUnmount bo bez tego będę odbierał pozycję na wszystkich ekranach jednocześnie
