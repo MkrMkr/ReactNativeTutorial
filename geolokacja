@@ -9,7 +9,9 @@ getCurrentPosition - zwraca ostatną lokalizację; watchPosition - odpala się g
 ma flage włączającą wysoką dokładność lokalizacji 
 } "enableHighAccuracy (bool) - Is a boolean representing if to use GPS or not. 
    If set to true, a GPS position will be requested. If set to false, a WIFI location will be requested"
-
+} jednak są flagi sterujące dokładnością i wykorzystaniem baterii [jak sie mają do Androida i iOS'a ?]      
+distanceFilter (m) - The minimum distance from the previous location to exceed before returning a new location. Set to 0 to not filter  locations. Defaults to 100m.
+useSignificantChanges (bool) - Uses the battery-efficient native significant changes APIs to return locations. Locations will only be  returned when the device detects a significant distance has been breached. Defaults to FALSE
 
 >>>>>>>>MINUSY<<<<<<<<
 - 
@@ -73,9 +75,9 @@ Plus znaleziony tylko w tej bibliotece:
 + 6 561 weekly downloads (ostatnio nawet: 8,392)
 + próbuje rozwiazać problem timeoutów na Androidzie
 + na iOSie nie trzeba robić prawie nic po dolaczeniu bibilioteki - tylko dodać wpis do Info.pslist tak jak przy dodawaniu defaultowej geolokalizacji RN
++ distanceFilter
 
 - prosta flaga enableHighAccuracy taka jak w defaultowym API RN
-i brak setLocationPriority 
 
 4. react-native-location (https://www.npmjs.com/package/react-native-location) (android (załącza natywne lib.)+ iOS (załącza natywne lib.))
 -------------------------
