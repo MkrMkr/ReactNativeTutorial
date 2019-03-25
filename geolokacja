@@ -58,6 +58,7 @@ Plus znaleziony tylko w tej bibliotece:
 
 + rozwiązany problem timeout'ów [nie potwierdzone, ale skoro uzywa androidowego fused location...]
 
+- trzeba robić osobne komponenty dla androida i iOS'a [nie odpaliłem tego na iOS]
 - podejrzenie ze uzywa pod spodem przestarzałego api androidowego (po kliknieciu "Fused" w link https://www.npmjs.com/package/react-native-fused-location )
 - 439 weekly downloads
 - wersja 0.4.0
@@ -68,7 +69,7 @@ Plus znaleziony tylko w tej bibliotece:
 3. react-native-geolocation-service ( https://www.npmjs.com/package/react-native-geolocation-service ) 
 -----------------------------------------------------------------------------------------------------
 + 2 proste metody jak wszędzie: watchPosition wywołuje się na kazdą zmianę lokalizacji, getCurrentPosition słuzy do zwracania ostatniej znanej lokalizacji
-+ wspólne api dla Androida i iOS'a
++ wspólne api dla Androida i iOS'a 
 + 6 561 weekly downloads (ostatnio nawet: 8,392)
 + próbuje rozwiazać problem timeoutów na Androidzie
 + na iOSie nie trzeba robić prawie nic po dolaczeniu bibilioteki - tylko dodać wpis do Info.pslist tak jak przy dodawaniu defaultowej geolokalizacji RN
@@ -135,9 +136,8 @@ c)[zaimpl] react-native-fused-location (Android) + defaultowe api (iOS)
 - Trzeba robić dwa osobne komponenty dla Androida i iOS'a
 - co z dokładnością geolokalizacji na iOS? ( https://stackoverflow.com/questions/43629524/react-native-ios-geoloc-has-poor-accuracy-by-default )
 
-e) react-native-fused-location (Android) + react_native_location (iOS)
-f) [nie sprawdzone] react-native-location z właczeniem opcji GoogleFusedLocation
-g)[płatne]react-native-background-geolocation
+d) [nie wiem jak skonfigurować] react-native-location z właczeniem opcji GoogleFusedLocation
+e)[płatne]react-native-background-geolocation
 
 //Permissiony
 /////////////
