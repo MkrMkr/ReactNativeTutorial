@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Platform, PermissionsAndroid, View, Text } from "react-native";
 import Geolocation from "react-native-geolocation-service";
 
-export default class GeoServ extends Component {
+export default class ReactNariveGeoServ extends Component {
   watchId = null;
   constructor(props) {
     super(props);
@@ -24,7 +24,6 @@ export default class GeoServ extends Component {
           //Wywoła się np. gdy weszliśmy na ekran z pobieraniem lokalizacji
           //z wyłączonym gpsem (watchPosition nie wywołuje się wtedy)
           alert("getCurrentPosition (error) " + JSON.stringify(error));
-          console.log("GeoServ component error" + error);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
       );

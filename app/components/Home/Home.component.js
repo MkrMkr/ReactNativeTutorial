@@ -10,7 +10,7 @@ class Home extends Component {
   };
 
   goToGeoServAction = () => {
-    this.props.navigation.navigate("GeoServ");
+    this.props.navigation.navigate("ReactNativeGeoServ");
   };
 
   setTitle = title => this.setState({ title }); //TODO: Ogarnąc tę konstrukcję
@@ -29,14 +29,15 @@ class Home extends Component {
             Please enter your note here{" "}
           </Text>
           <TextArea style={styles.textArea} />
-          <Button
-            title="Go to connected libs sample"
-            onPress={() => this.props.navigation.navigate("GeoServImproved")}
-          />
-          <View style={{ flexDirection: "row" }}>
+
+          <View style={{ flexDirection: "column" }}>
+            <Button
+              title="react-native-location"
+              onPress={() => this.props.navigation.navigate("GeoServImproved")}
+            />
             <CustomButton onPress={() => this.goToGeoServAction()} />
             <Button
-              title="Go to React Native location sample"
+              title="fused (android), default (ios)"
               onPress={() => this.props.navigation.navigate("FusedGeolocation")}
             />
           </View>

@@ -7,7 +7,9 @@ class CustomButton extends Component {
     return (
       <View style={styles.container}>
         <TouchableHighlight onPress={this.props.onPress}>
-          <Text style={styles.buttonText}>Custom Button</Text>
+          <Text style={styles.buttonText}>
+            react-native-geolocation-service
+          </Text>
         </TouchableHighlight>
       </View>
     );
