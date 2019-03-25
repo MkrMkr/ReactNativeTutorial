@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, Text } from "react-native";
 import RNLocation from "react-native-location";
 
-export default class GeoServImproved extends Component {
+export default class ReactNativeLocation extends Component {
   watchId = null;
   constructor(props) {
     super(props);

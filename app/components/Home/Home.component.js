@@ -33,7 +33,9 @@ class Home extends Component {
           <View style={{ flexDirection: "column" }}>
             <Button
               title="react-native-location"
-              onPress={() => this.props.navigation.navigate("GeoServImproved")}
+              onPress={() =>
+                this.props.navigation.navigate("ReactNativeLocation")
+              }
             />
             <CustomButton onPress={() => this.goToGeoServAction()} />
             <Button
