@@ -79,7 +79,7 @@ i brak setLocationPriority
 
 4. react-native-location (https://www.npmjs.com/package/react-native-location) (android (załącza natywne lib.)+ iOS (załącza natywne lib.))
 -------------------------
-+ wykorzystuje natywne API obydwu platform, podobno pozwala na załączenie providera GoogleFusedLocation [ale nie wiem jak to zrobić]
++ wykorzystuje natywne API obydwu platform, podobno pozwala na załączenie providera GoogleFusedLocation [ale nie wiem jak to zrobić i trzeba to robić przez natywny kod]
 + skoro wykorzystuje natywne API - rozwiązuje ewentualne problemy dokładności/timeoutów
 + pozwala na ustawianie flag dokładnosci GPS charakterystycznych dla obydwu platform
 + umozliwia pytanie o permissiony z opcjami "when in use" lub "always" na iOS i coarse lub fine na androidzie
