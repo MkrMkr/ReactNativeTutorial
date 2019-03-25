@@ -145,6 +145,8 @@ e)[płatne]react-native-background-geolocation
 * Android - RN ma specjalne api do requestowania o permissiony
 * iOS  - jeśli defaultowe api nie wystarcza, mozna uzyc react-native-location
 Allows you choose what type of permission to ask for ("when in use" or "always"). The built-in geolocation library will look at your plist file and choose "always"
+* w przypadku react-native-geolocation-service na iOSie pojawia się tabelka z wszystkimi opcjami: "Always allow", "Only While Using the App"
+(uzywam defaultowego api)
 
  Inne
  /////
