@@ -9,8 +9,7 @@ getCurrentPosition - zwraca ostatną lokalizację; watchPosition - odpala się g
 ma flage włączającą wysoką dokładność lokalizacji 
 } "enableHighAccuracy (bool) - Is a boolean representing if to use GPS or not. 
    If set to true, a GPS position will be requested. If set to false, a WIFI location will be requested"
-} jednak są flagi sterujące dokładnością i wykorzystaniem baterii [jak sie mają do Androida i iOS'a ?]      
-distanceFilter (m) - The minimum distance from the previous location to exceed before returning a new location. Set to 0 to not filter  locations. Defaults to 100m.
+}  distanceFilter (m) - The minimum distance from the previous location to exceed before returning a new location. Set to 0 to not filter  locations. Defaults to 100m.
 useSignificantChanges (bool) - Uses the battery-efficient native significant changes APIs to return locations. Locations will only be  returned when the device detects a significant distance has been breached. Defaults to FALSE
 
 >>>>>>>>MINUSY<<<<<<<<
